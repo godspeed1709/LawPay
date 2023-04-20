@@ -1,0 +1,173 @@
+:root {
+  --light: #d8dbe0;
+  --dark: #28292c;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 10px 40px;
+  border: 1px transparent;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px 2px #dddddd;
+  -moz-box-shadow: 0 0 5px 2px #dddddd;
+  box-shadow: 0 0 5px 2px #dddddd;
+}
+
+.amt_head {
+  font-family: Fredoka;
+  font-size: 20px;
+}
+
+.amt_head .curr {
+  color: #8B95AE;
+  font-weight: 500;
+}
+
+.amt_value {
+  font-family: Fredoka;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.tax_warn {
+  font-family: Fredoka;
+  font-size: 20px;
+  font-weight: normal;
+  color: #8B95AE;
+  display: block;
+}
+
+.due_on {
+  width: fit-content;
+  border-radius: 30px;
+  background-color: #FDEEEF;
+  color: #EC4045;
+  font-family: Fredoka;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: -25px;
+}
+
+.tabular_line {
+  border: 1px solid #ECEEF4;
+  height: 0.1px;
+}
+
+.tabular_line-1 {
+  margin: 20px 0;
+}
+
+.pdf_sen {
+  font-size: 20px;
+  font-family: Fredoka;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  background-color: #d2d2d2;
+  border-radius: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 200px;
+  margin: 2.5px;
+  transition: 0.2s;
+}
+
+input:checked + .button{
+  background-color: #3634C5;
+}
+
+input:checked + .button::before{
+  transform: translateX(50px);
+}
+
+input {
+  display: none;
+}
+
+input:checked + .button::before{
+  transform: translateX(50px);
+  animation-name: toggle;
+  animation-duration: 0.8s;
+  transition-delay: 0.2s;
+}
+
+@keyframes toggle{
+  0%{
+      width: 45px;
+      height: 45px;
+  }
+  25%{
+      margin: 5px;
+      width: 15px;
+      height: 40px;
+  }
+  50%{
+      margin: 10px;
+      width: 50px;
+      height: 30px;
+  }
+  75%{
+      margin: 2.5px;
+      width: 35px;
+      height: 45px;
+  }
+  100%{
+      width: 45px;
+      height: 45px;
+  }
+}
+
+.send_btn, .check_btn {
+  font-family: Fredoka;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #3634C5;
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.send_btn {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.flex_amt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check_btn {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.send_btn:hover, .check_btn:hover {
+  transform: scale(1.1);
+}

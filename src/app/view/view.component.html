@@ -1,0 +1,76 @@
+<div class="card">
+  <div class="view_details">
+    <div class="seller_icon"><img src="../../assets/seller_logo.png" alt="seller_logo" title="Seller Logo" class="seller_logo"></div>
+    <div class="seller_n_e">
+      <div class="seller_name">{{seller_com}}</div>
+      <div class="seller_email">{{seller_email}}</div>
+    </div>
+    <div class="seller_add">{{seller_add}}</div>
+  </div>
+  <div class="invoice_details">
+    <div class="invoice">
+      <p class="heading">Invoice Number</p>
+      <p class="invoice_no">{{invoice_no}}</p>
+      <p class="inv_issue_date">Issued Date: <span class="date">{{issueDate}}</span></p>
+      <p class="inv_due_date">Due Date: <span class="date">{{dueDate}}</span></p>
+    </div>
+    <div class="billed">
+      <p class="heading">Billed To</p>
+      <p class="billed_name">{{client_name}}</p>
+      <p class="billed_com">{{client_com}}</p>
+      <p class="billed_add">{{client_city}}</p>
+    </div>
+  </div>
+  <div class="item_details">
+    <p class="item_details_heading">Item Details</p>
+    <p class="heading_desc">Individual Item(s) and It's Rate(s)</p>
+    <hr class="tabular_line tabular_line-1">
+    <span class="disp disp_item_name">Item Name</span>
+    <span class="disp disp_hours">Hours</span>
+    <span class="disp disp_rate">Rate/Hr</span>
+    <span class="disp disp_tax">Tax</span>
+    <span class="disp disp_total">Line Total</span>
+    <hr class="tabular_line tabular_line-2">
+    <div class="ind_items form-group" *ngFor="let i of ele">
+      <ul>
+        <li>
+          <input type="text" class="description item" placeholder="Description" [(ngModel)]="i.desc" [attr.disabled]="i.isDisabled == true ? true : null">
+          <input type="text" class="hrs item" placeholder="0" [(ngModel)]="i.hrs" [attr.disabled]="i.isDisabled == true ? true : null">
+          <div class="currency-wrap">
+            <span class="currency-code">₹</span>
+            <input type="text" class="rate item text-currency" placeholder="0" [(ngModel)]="i.rate" [attr.disabled]="i.isDisabled == true ? true : null">
+          </div>
+          <div class="currency-wrap">
+            <span class="currency-code">₹</span>
+            <input type="text" class="tax item text-currency" placeholder="0.00" [(ngModel)]="i.tax" [attr.disabled]="i.isDisabled == true ? true : null">
+          </div>
+          <div class="currency-wrap">
+            <span class="currency-code">₹</span>
+            <input type="text" class="total item text-currency" placeholder="0.00" [(ngModel)]="i.line_total" (focus)="onFocusTotal()" [attr.disabled]="i.isDisabled == true ? true : null">
+          </div>
+          <div class="add_item" (click)="onadd()"><i class="fa-solid fa-circle-plus add_font"></i></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr class="tabular_line tabular_line-3">
+  <div class="total_calc_seg">
+    <div class="total_calc">
+      <ul>
+        <li>
+          <span class="sub_total sub_head">Sub Total</span> <span class="sub_total sub_value value">₹{{sub_val}}</span>
+        </li>
+        <li>
+          <span class="Discount">Discount</span> <span class="disc disc_value value">₹{{disc_val}}</span>
+        </li>
+        <li>
+          <span class="tax_total">Total Tax</span> <span class="total_tax tax_value value">₹{{tax_val}}</span>
+        </li>
+      <hr class="tabular_line tabular_line-4">
+        <li>
+          <span class="total total_head">Total Amount</span> <span class="total total_value value">₹{{total_val}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

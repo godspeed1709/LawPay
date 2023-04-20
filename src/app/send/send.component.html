@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="amt_due">
+    <p class="amt_head">Amount Due <span class="curr"> (INR)</span></p>
+    <div class="flex_amt">
+      <p class="amt_value">₹{{amount}} <span class="tax_warn"> (Tax Incl.)</span></p>
+      <div class="check_btn" (click)="checkAmt()">Check Amount</div>
+    </div>
+      <div class="due_on">Due on {{due_date}}</div>
+    <hr class="tabular_line tabular_line-1">
+    <div class="container pdf">
+      <span class="pdf_sen">Also attach pdf in mail</span>
+      <input type="checkbox" id="check">
+      <label for="check" class="button"></label>
+    </div>
+    <div class="send_btn">Send Invoice</div>
+  </div>
+</div>

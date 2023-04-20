@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  position: fixed;
+  width: 1600px;
+  font-family: Fredoka, FontAwesome;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: -135px 0;
+  padding: 50px 20px 20px;
+  border-radius: 0 0 20px 20px;
+  -webkit-box-shadow: 3px 3px 10px 1px #dddddd;
+  -moz-box-shadow: 3px 3px 10px 1px #dddddd;
+  box-shadow: 3px 3px 10px 1px #dddddd;
+}
+
+.nav-links {
+  display: flex-end;
+}
+
+.nav-links li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.logo > a {
+  text-decoration: none;
+  color: #2826C0;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.links, .login {
+  text-decoration: none;
+  font-family: Fredoka;
+  color: #000022;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.links {
+  padding: 0 10px 38px;
+}
+
+.links > i {
+  color: #96A0B5;
+}
+
+.active > i {
+  color: #2826C0;
+}
+
+.active {
+  color: #2826C0;
+  border-bottom: 2px solid #2826C0;
+}
+
+.login {
+  margin-left: auto;
+}
+
+.user_logo {
+  cursor: pointer;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  margin-bottom: -10px;
+}

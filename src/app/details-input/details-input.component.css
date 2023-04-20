@@ -1,0 +1,67 @@
+.card {
+  width: 1600px;
+  height: auto;
+  padding: 10px 0;
+  background-color: #ffffff;
+  border: 1px transparent;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px 2px #dddddd;
+  -moz-box-shadow: 0 0 5px 2px #dddddd;
+  box-shadow: 0 0 5px 2px #dddddd;
+}
+
+.client_seller_details .heading {
+  font-family: Fredoka;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 40px 0 40px 40px;
+}
+
+.client_seller_details input {
+  width: 1520px;
+  margin: 0 0 20px 40px;
+  background-color: #FAFBFC;
+  height: 55px;
+  padding: 5px 20px;
+  border: 1px solid #ECEEF4;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.client_seller_details .issue_date, .client_seller_details .due_date {
+  width: 625px;
+}
+
+.client_seller_details label {
+  margin-left: 40px;
+  display: inline-block;
+  font-family: Fredoka;
+  color: #747475;
+  font-size: 16px;
+}
+
+.client_seller_details .amount_due {
+  margin-bottom: 40px;
+}
+
+.add_items {
+  font-size: 20px;
+  height: 55px;
+  width: 150px;
+  margin: 30px auto 20px;
+  color: #ffffff;
+  background-color: #2826C0;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  line-height: 2.7;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add_items:hover {
+  transform: scale(1.1);
+}

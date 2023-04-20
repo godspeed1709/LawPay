@@ -1,0 +1,20 @@
+<div class="card client_seller_details">
+  <p class="heading">Client - Seller Details</p>
+  <input type="text" class="name" placeholder="Name" [(ngModel)]="name">
+  <input type="text" class="invoice_no" placeholder="Invoice No." [(ngModel)]="invoice_no">
+  <input type="text" class="acc_no" placeholder="Account No." [(ngModel)]="acc_no">
+  <input type="text" class="client_com" placeholder="Seller Company" [(ngModel)]="seller_com">
+  <input type="text" class="seller_email" placeholder="Seller Email" [(ngModel)]="seller_email">
+  <input type="text" class="seller_phone" placeholder="Seller Contact No." [(ngModel)]="seller_phone">
+  <input type="text" class="seller_add" placeholder="Seller Address" [(ngModel)]="seller_add">
+  <input type="text" class="client_com" placeholder="Client Company" [(ngModel)]="client_com">
+  <input type="text" class="client_email" placeholder="Client Email" [(ngModel)]="client_email">
+  <input type="text" class="client_phone" placeholder="Client Contact No." [(ngModel)]="client_phone">
+  <input type="text" class="client_add" placeholder="Client Address" [(ngModel)]="client_add">
+  <input type="text" class="client_city" placeholder="Client State And Country" [(ngModel)]="client_city">
+  <label for="issueDate">Issue Date:</label>
+  <input type="date" class="issue_date" placeholder="Issue Date" [(ngModel)]="issueDate" name="issueDate">
+  <label for="dueDate">Due Date:</label>
+  <input type="date" class="due_date" placeholder="Due Date" [(ngModel)]="dueDate" name="dueDate">
+  <div class="add_items" (click)="onadd()"><i class="fa-solid fa-plus add_font"></i> Add Details</div>
+</div>

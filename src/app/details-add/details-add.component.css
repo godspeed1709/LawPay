@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 1600px;
+  max-height: 750px;
+}
+
+.con-inp {
+  display: grid;
+  grid-row: span 1;
+  width: 100%;
+  margin: 40px 0;
+}

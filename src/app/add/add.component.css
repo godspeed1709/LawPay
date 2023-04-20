@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 10px 40px;
+  margin-top: 30px;
+  border: 1px transparent;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px 2px #dddddd;
+  -moz-box-shadow: 0 0 5px 2px #dddddd;
+  box-shadow: 0 0 5px 2px #dddddd;
+}
+
+.client_details  {
+  font-family: Fredoka;
+  font-size: 20px;
+}
+
+.client_name {
+  font-weight: 500;
+}
+
+.client_email, .client_add {
+  color: #8B95AE;
+}
+
+.client_main {
+  display: flex;
+  justify-content: flex-start;
+  font-family: Fredoka;
+}
+
+.client_logo {
+  cursor: pointer;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.tabular_line {
+  border: 1px solid #ECEEF4;
+  height: 0.1px;
+}
+
+.client_rest_details {
+  text-align: right;
+  margin: 15px 0 20px 0;
+}
+
+.button_new {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #F5F5FC;
+  font-weight: 500;
+  color: #1E1CBD;
+  border-radius: 20px;
+  padding: 15px 0;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.button_new:hover {
+  transform: scale(1.1);
+}
